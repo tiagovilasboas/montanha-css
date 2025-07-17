@@ -1,0 +1,204 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página Completa - Montanha CSS</title>
+  <link rel="stylesheet" href="/montanha.css" />
+</head>
+<body>
+  <!-- Skip Link para Acessibilidade -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Header -->
+  <header class="mnt-header">
+    <div class="mnt-header-content">
+      <a href="#" class="mnt-header-brand">Montanha CSS</a>
+      
+      <nav class="mnt-nav">
+        <ul class="mnt-nav-list">
+          <li class="mnt-nav-item">
+            <a href="#" class="mnt-nav-link active">Início</a>
+          </li>
+          <li class="mnt-nav-item">
+            <a href="#" class="mnt-nav-link">Documentação</a>
+          </li>
+          <li class="mnt-nav-item">
+            <a href="#" class="mnt-nav-link">Exemplos</a>
+          </li>
+          <li class="mnt-nav-item">
+            <a href="#" class="mnt-nav-link">GitHub</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Theme Toggle -->
+      <button class="mnt-theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema">
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="mnt-hero">
+    <div class="mnt-hero-content">
+      <h1>Bem-vindo ao Montanha CSS</h1>
+      <p>Um framework CSS minimalista e acessível para criar interfaces modernas</p>
+      <button class="mnt-btn mnt-hover-lift">Começar Agora</button>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main id="main-content" class="mnt-container-lg mnt-py-4">
+    <div class="mnt-grid mnt-grid-cols-1 mnt-gap-4 mnt-md-grid-cols-2 mnt-lg-grid-cols-3">
+      
+      <!-- Card 1 -->
+      <div class="mnt-card mnt-hover-lift">
+        <h3>Design System</h3>
+        <p>Sistema de design consistente com tokens CSS, cores semânticas e tipografia fluida.</p>
+        <button class="mnt-btn">Saiba Mais</button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="mnt-card mnt-hover-lift">
+        <h3>Acessibilidade</h3>
+        <p>Foco em acessibilidade com skip links, focus states e suporte a reduced motion.</p>
+        <button class="mnt-btn">Saiba Mais</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="mnt-card mnt-hover-lift">
+        <h3>Dark Mode</h3>
+        <p>Suporte nativo a dark mode com toggle manual e preferência do sistema.</p>
+        <button class="mnt-btn">Saiba Mais</button>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="mnt-card mnt-hover-lift">
+        <h3>Responsivo</h3>
+        <p>Layout responsivo com breakpoints otimizados para todos os dispositivos.</p>
+        <button class="mnt-btn">Saiba Mais</button>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="mnt-card mnt-hover-lift">
+        <h3>Utilitários</h3>
+        <p>Classes utilitárias para flexbox, grid, spacing e muito mais.</p>
+        <button class="mnt-btn">Saiba Mais</button>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="mnt-card mnt-hover-lift">
+        <h3>Print Styles</h3>
+        <p>Estilos otimizados para impressão com quebras de página adequadas.</p>
+        <button class="mnt-btn">Saiba Mais</button>
+      </div>
+    </div>
+
+    <!-- Form Section -->
+    <section class="mnt-mt-4">
+      <h2>Formulário de Contato</h2>
+      <form class="mnt-card mnt-p-3">
+        <div class="mnt-mb-2">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        
+        <div class="mnt-mb-2">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        
+        <div class="mnt-mb-2">
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        
+        <button type="submit" class="mnt-btn">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Table Section -->
+    <section class="mnt-mt-4">
+      <h2>Dados de Exemplo</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>João Silva</td>
+            <td>joao@exemplo.com</td>
+            <td>Ativo</td>
+          </tr>
+          <tr>
+            <td>Maria Santos</td>
+            <td>maria@exemplo.com</td>
+            <td>Ativo</td>
+          </tr>
+          <tr>
+            <td>Pedro Costa</td>
+            <td>pedro@exemplo.com</td>
+            <td>Inativo</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mnt-footer">
+    <div class="mnt-footer-content">
+      <p>&copy; 2024 Montanha CSS. Criado com ❤️ para a web.</p>
+      <p class="mnt-text-sm mnt-text-muted">
+        <a href="#">Documentação</a> • 
+        <a href="#">GitHub</a> • 
+        <a href="#">Licença</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Theme Toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      // Atualizar ícone
+      const button = document.querySelector('.mnt-theme-toggle');
+      if (button) {
+        button.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    // Carregar tema salvo
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      const button = document.querySelector('.mnt-theme-toggle');
+      if (button) {
+        button.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    // Detectar preferência do sistema
+    if (!savedTheme) {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (prefersDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        const button = document.querySelector('.mnt-theme-toggle');
+        if (button) {
+          button.textContent = '☀️';
+        }
+      }
+    }
+  </script>
+</body>
+</html> 

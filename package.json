@@ -2,6 +2,7 @@
   "name": "montanha-css",
   "version": "1.0.0",
   "description": "A pure CSS framework with modular layers",
+  "packageManager": "pnpm@10.12.4",
   "main": "dist/montanha.css",
   "style": "dist/montanha.css",
   "files": [
@@ -9,7 +10,9 @@
     "LICENSE",
     "README.md"
   ],
-  "sideEffects": ["*.css"],
+  "sideEffects": [
+    "*.css"
+  ],
   "exports": {
     ".": "./dist/montanha.css",
     "./base": "./dist/montanha.base.css",
@@ -33,7 +36,8 @@
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
     "postcss": "^8.4.31",
-    "postcss-cli": "^10.1.0"
+    "postcss-cli": "^10.1.0",
+    "postcss-js": "^4.0.1"
   },
   "keywords": [
     "css",
@@ -52,4 +56,4 @@
     "url": "https://github.com/tiagoboas/montanha-css/issues"
   },
   "homepage": "https://github.com/tiagoboas/montanha-css#readme"
-} 
+}

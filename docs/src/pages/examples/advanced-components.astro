@@ -1,0 +1,420 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Componentes Avançados - Montanha CSS</title>
+  <link rel="stylesheet" href="/montanha.css" />
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- Header com Menu Hambúrguer -->
+  <header class="mnt-header">
+    <div class="mnt-header-content">
+      <a href="#" class="mnt-header-brand">Montanha CSS</a>
+      
+      <!-- Menu Hambúrguer Mobile -->
+      <a href="#nav-menu" class="mnt-nav-toggle mnt-mobile-only">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="mnt-nav mnt-desktop-only">
+        <ul class="mnt-nav-list">
+          <li class="mnt-nav-item">
+            <a href="#" class="mnt-nav-link active">Início</a>
+          </li>
+          <li class="mnt-nav-item">
+            <a href="#" class="mnt-nav-link">Componentes</a>
+          </li>
+          <li class="mnt-nav-item">
+            <a href="#" class="mnt-nav-link">Documentação</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <nav id="nav-menu" class="mnt-nav-list mnt-mobile-only">
+        <li class="mnt-nav-item">
+          <a href="#" class="mnt-nav-link active">Início</a>
+        </li>
+        <li class="mnt-nav-item">
+          <a href="#" class="mnt-nav-link">Componentes</a>
+        </li>
+        <li class="mnt-nav-item">
+          <a href="#" class="mnt-nav-link">Documentação</a>
+        </li>
+      </nav>
+      <div class="mnt-nav-overlay"></div>
+
+      <button class="mnt-theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema">
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="mnt-container-lg mnt-py-4">
+    
+    <!-- Alerts -->
+    <section class="mnt-mb-4">
+      <h2>Alertas</h2>
+      <div class="mnt-alert mnt-alert-info">
+        <strong>Info:</strong> Este é um alerta informativo.
+      </div>
+      <div class="mnt-alert mnt-alert-success">
+        <strong>Sucesso:</strong> Operação realizada com sucesso!
+      </div>
+      <div class="mnt-alert mnt-alert-warning">
+        <strong>Atenção:</strong> Este é um aviso importante.
+      </div>
+      <div class="mnt-alert mnt-alert-danger">
+        <strong>Erro:</strong> Algo deu errado.
+      </div>
+    </section>
+
+    <!-- Badges -->
+    <section class="mnt-mb-4">
+      <h2>Badges</h2>
+      <p>
+        <span class="mnt-badge mnt-badge-primary">Primário</span>
+        <span class="mnt-badge mnt-badge-secondary">Secundário</span>
+        <span class="mnt-badge mnt-badge-success">Sucesso</span>
+        <span class="mnt-badge mnt-badge-warning">Aviso</span>
+        <span class="mnt-badge mnt-badge-danger">Erro</span>
+      </p>
+    </section>
+
+    <!-- Progress Bars -->
+    <section class="mnt-mb-4">
+      <h2>Barras de Progresso</h2>
+      <div class="mnt-progress">
+        <div class="mnt-progress-bar" style="width: 75%"></div>
+      </div>
+      <div class="mnt-progress mnt-progress-success">
+        <div class="mnt-progress-bar" style="width: 90%"></div>
+      </div>
+      <div class="mnt-progress mnt-progress-warning">
+        <div class="mnt-progress-bar" style="width: 60%"></div>
+      </div>
+      <div class="mnt-progress mnt-progress-danger">
+        <div class="mnt-progress-bar" style="width: 30%"></div>
+      </div>
+    </section>
+
+    <!-- Tooltips -->
+    <section class="mnt-mb-4">
+      <h2>Tooltips</h2>
+      <p>
+        Passe o mouse sobre 
+        <span class="mnt-tooltip" data-tooltip="Este é um tooltip!">este texto</span>
+        para ver o tooltip.
+      </p>
+    </section>
+
+    <!-- Modals -->
+    <section class="mnt-mb-4">
+      <h2>Modais</h2>
+      <a href="#modal-example" class="mnt-btn">Abrir Modal</a>
+      
+      <div id="modal-example" class="mnt-modal">
+        <div class="mnt-modal-content">
+          <button class="mnt-modal-close" onclick="window.location.hash=''">×</button>
+          <h3>Exemplo de Modal</h3>
+          <p>Este é um modal puro CSS, sem JavaScript!</p>
+          <button class="mnt-btn" onclick="window.location.hash=''">Fechar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accordion -->
+    <section class="mnt-mb-4">
+      <h2>Accordion</h2>
+      <div class="mnt-accordion">
+        <div id="accordion-1" class="mnt-accordion-item">
+          <button class="mnt-accordion-header">
+            Seção 1
+          </button>
+          <div class="mnt-accordion-content">
+            <p>Conteúdo da seção 1. Clique no cabeçalho para expandir/colapsar.</p>
+          </div>
+        </div>
+        <div id="accordion-2" class="mnt-accordion-item">
+          <button class="mnt-accordion-header">
+            Seção 2
+          </button>
+          <div class="mnt-accordion-content">
+            <p>Conteúdo da seção 2. Este accordion funciona puramente com CSS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <section class="mnt-mb-4">
+      <h2>Abas</h2>
+      <div class="mnt-tabs">
+        <ul class="mnt-tab-list">
+          <li id="tab-1" class="mnt-tab-item">
+            <button class="mnt-tab-button">Aba 1</button>
+          </li>
+          <li id="tab-2" class="mnt-tab-item">
+            <button class="mnt-tab-button">Aba 2</button>
+          </li>
+          <li id="tab-3" class="mnt-tab-item">
+            <button class="mnt-tab-button">Aba 3</button>
+          </li>
+        </ul>
+        
+        <div class="mnt-tab-content">
+          <h3>Conteúdo da Aba 1</h3>
+          <p>Este é o conteúdo da primeira aba.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulários Avançados -->
+    <section class="mnt-mb-4">
+      <h2>Formulários Avançados</h2>
+      <form class="mnt-card mnt-p-3">
+        <div class="mnt-form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        
+        <div class="mnt-form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <div class="mnt-form-help">Seu email não será compartilhado.</div>
+        </div>
+        
+        <div class="mnt-form-group">
+          <label for="phone">Telefone</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+        
+        <div class="mnt-form-group">
+          <label for="birthdate">Data de Nascimento</label>
+          <input type="date" id="birthdate" name="birthdate" />
+        </div>
+        
+        <div class="mnt-form-group">
+          <label for="color">Cor Favorita</label>
+          <input type="color" id="color" name="color" />
+        </div>
+        
+        <div class="mnt-form-group">
+          <label for="range">Satisfação</label>
+          <input type="range" id="range" name="range" min="0" max="10" value="5" />
+        </div>
+        
+        <div class="mnt-form-group">
+          <label for="file">Arquivo</label>
+          <input type="file" id="file" name="file" />
+        </div>
+        
+        <div class="mnt-form-group">
+          <label for="country">País</label>
+          <select id="country" name="country">
+            <option value="">Selecione...</option>
+            <option value="br">Brasil</option>
+            <option value="us">Estados Unidos</option>
+            <option value="ca">Canadá</option>
+          </select>
+        </div>
+        
+        <fieldset class="mnt-form-group">
+          <legend>Preferências</legend>
+          <label>
+            <input type="checkbox" name="newsletter" />
+            Receber newsletter
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="notifications" />
+            Notificações push
+          </label>
+        </fieldset>
+        
+        <fieldset class="mnt-form-group">
+          <legend>Gênero</legend>
+          <label>
+            <input type="radio" name="gender" value="male" />
+            Masculino
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="gender" value="female" />
+            Feminino
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="gender" value="other" />
+            Outro
+          </label>
+        </fieldset>
+        
+        <div class="mnt-form-group">
+          <label class="mnt-switch">
+            <input type="checkbox" name="dark-mode" />
+            <span class="mnt-switch-slider"></span>
+            Modo escuro
+          </label>
+        </div>
+        
+        <button type="submit" class="mnt-btn">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Lista Horizontal -->
+    <section class="mnt-mb-4">
+      <h2>Lista Horizontal</h2>
+      <ul class="mnt-scroll-list">
+        <li class="mnt-scroll-item">
+          <div class="mnt-card">
+            <h3>Item 1</h3>
+            <p>Descrição do item 1</p>
+          </div>
+        </li>
+        <li class="mnt-scroll-item">
+          <div class="mnt-card">
+            <h3>Item 2</h3>
+            <p>Descrição do item 2</p>
+          </div>
+        </li>
+        <li class="mnt-scroll-item">
+          <div class="mnt-card">
+            <h3>Item 3</h3>
+            <p>Descrição do item 3</p>
+          </div>
+        </li>
+        <li class="mnt-scroll-item">
+          <div class="mnt-card">
+            <h3>Item 4</h3>
+            <p>Descrição do item 4</p>
+          </div>
+        </li>
+        <li class="mnt-scroll-item">
+          <div class="mnt-card">
+            <h3>Item 5</h3>
+            <p>Descrição do item 5</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Elementos HTML Estilizados -->
+    <section class="mnt-mb-4">
+      <h2>Elementos HTML</h2>
+      
+      <h3>Blockquote</h3>
+      <blockquote>
+        "A simplicidade é a sofisticação máxima." - Leonardo da Vinci
+      </blockquote>
+      
+      <h3>Código</h3>
+      <p>Use <code>console.log()</code> para debugar.</p>
+      <pre><code>function hello() {
+  console.log("Hello, Montanha CSS!");
+}</code></pre>
+      
+      <h3>Mark</h3>
+      <p>Este é um texto com <mark>destaque</mark> importante.</p>
+      
+      <h3>KBD</h3>
+      <p>Pressione <kbd>Ctrl</kbd> + <kbd>C</kbd> para copiar.</p>
+      
+      <h3>Details</h3>
+      <details>
+        <summary>Clique para expandir</summary>
+        <p>Conteúdo expandido aqui.</p>
+      </details>
+      
+      <h3>Progress</h3>
+      <progress value="70" max="100"></progress>
+      
+      <h3>Fieldset</h3>
+      <fieldset>
+        <legend>Informações Pessoais</legend>
+        <label>Nome: <input type="text" /></label>
+      </fieldset>
+      
+      <h3>Output & Time</h3>
+      <p>Resultado: <output>42</output></p>
+      <p>Data: <time datetime="2024-01-15">15 de Janeiro, 2024</time></p>
+    </section>
+  </main>
+
+  <!-- Bottom Navigation Mobile -->
+  <nav class="mnt-bottom-nav mnt-mobile-only">
+    <ul class="mnt-bottom-nav-list">
+      <li class="mnt-bottom-nav-item">
+        <a href="#" class="mnt-bottom-nav-link active">
+          <span class="mnt-bottom-nav-icon">🏠</span>
+          Início
+        </a>
+      </li>
+      <li class="mnt-bottom-nav-item">
+        <a href="#" class="mnt-bottom-nav-link">
+          <span class="mnt-bottom-nav-icon">🧩</span>
+          Componentes
+        </a>
+      </li>
+      <li class="mnt-bottom-nav-item">
+        <a href="#" class="mnt-bottom-nav-link">
+          <span class="mnt-bottom-nav-icon">📚</span>
+          Docs
+        </a>
+      </li>
+      <li class="mnt-bottom-nav-item">
+        <a href="#" class="mnt-bottom-nav-link">
+          <span class="mnt-bottom-nav-icon">⚙️</span>
+          Config
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <script>
+    // Theme Toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      const button = document.querySelector('.mnt-theme-toggle');
+      if (button) {
+        button.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    // Carregar tema salvo
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      const button = document.querySelector('.mnt-theme-toggle');
+      if (button) {
+        button.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    // Detectar preferência do sistema
+    if (!savedTheme) {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (prefersDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        const button = document.querySelector('.mnt-theme-toggle');
+        if (button) {
+          button.textContent = '☀️';
+        }
+      }
+    }
+  </script>
+</body>
+</html> 
