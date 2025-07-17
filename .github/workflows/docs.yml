@@ -1,0 +1,17 @@
+name: Docs
+on:
+  push:
+    branches: [main]
+    paths: ["docs/**", "src/**"]    # rebuild se docs ou CSS mudarem
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - run: pnpm install
+      - run: pnpm --filter docs run build          # gera docs/dist
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/dist 

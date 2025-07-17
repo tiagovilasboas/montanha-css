@@ -1,0 +1,14 @@
+name: Visual tests
+on: [pull_request]
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - run: pnpm install
+      - run: pnpm --filter docs run build
+      - name: Audit
+        uses: treosh/lighthouse-ci-action@v10
+        with:
+          configPath: ".lighthouserc.json" 
