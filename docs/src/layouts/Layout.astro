@@ -1,0 +1,54 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Montanha CSS - A Pure CSS Framework" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="bg-white border-b border-gray-200">
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="text-xl font-bold text-primary">Montanha CSS</a>
+          <div class="flex gap-6">
+            <a href="/getting-started" class="text-gray-600 hover:text-gray-900">Getting Started</a>
+            <a href="/components" class="text-gray-600 hover:text-gray-900">Components</a>
+            <a href="/utilities" class="text-gray-600 hover:text-gray-900">Utilities</a>
+            <a href="https://github.com/tiagoboas/montanha-css" class="text-gray-600 hover:text-gray-900">GitHub</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <slot />
+
+    <footer class="bg-gray-50 border-t border-gray-200 mt-16">
+      <div class="container mx-auto px-4 py-8">
+        <div class="text-center text-gray-600">
+          <p>&copy; 2024 Montanha CSS. Built with ❤️ by Tiago Boas.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :root {
+    --color-primary: #3b82f6;
+  }
+  
+  .text-primary {
+    color: var(--color-primary);
+  }
+</style> 

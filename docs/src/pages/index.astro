@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Montanha CSS - A Pure CSS Framework">
+  <main class="container mx-auto px-4 py-8">
+    <section class="text-center mb-16">
+      <h1 class="text-4xl font-bold mb-4">Montanha CSS</h1>
+      <p class="text-xl text-gray-600 mb-8">A pure CSS framework with modular layers</p>
+      <div class="flex gap-4 justify-center">
+        <a href="/getting-started" class="mnt-btn mnt-btn--primary">Get Started</a>
+        <a href="/components" class="mnt-btn mnt-btn--outline">Components</a>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="mnt-card">
+        <div class="mnt-card__body">
+          <h3 class="text-xl font-semibold mb-2">Modular Design</h3>
+          <p>Import only what you need. Use base styles, components, or utilities independently.</p>
+        </div>
+      </div>
+      
+      <div class="mnt-card">
+        <div class="mnt-card__body">
+          <h3 class="text-xl font-semibold mb-2">Pure CSS</h3>
+          <p>No JavaScript dependencies. Lightweight and fast with modern CSS features.</p>
+        </div>
+      </div>
+      
+      <div class="mnt-card">
+        <div class="mnt-card__body">
+          <h3 class="text-xl font-semibold mb-2">Design Tokens</h3>
+          <p>Consistent design system with CSS custom properties for easy theming.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6">Quick Start</h2>
+      <div class="bg-gray-100 p-6 rounded-lg">
+        <pre><code>npm install montanha-css</code></pre>
+      </div>
+      <p class="mt-4 text-gray-600">Then import the styles you need:</p>
+      <div class="bg-gray-100 p-6 rounded-lg mt-2">
+        <pre><code>/* Full framework */
+@import 'montanha-css';
+
+/* Or individual layers */
+@import 'montanha-css/base';
+@import 'montanha-css/components';
+@import 'montanha-css/utilities';</code></pre>
+      </div>
+    </section>
+  </main>
+</Layout> 
