@@ -1,0 +1,11 @@
+:root{
+  --mnt-break-sm: 640px;
+  --mnt-break-md: 768px;
+  --mnt-break-lg: 1024px;
+  --mnt-break-xl: 1280px;
+}
+
+/* helper mixins (PostCSS nested) */
+@media (min-width: 640px){
+  .sm\:show{ display:block !important; }
+} 
