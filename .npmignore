@@ -1,0 +1,7 @@
+# não publicar fonte nem playground
+src/
+docs/
+.github/
+.vscode/
+*.astro
+*.mdx 

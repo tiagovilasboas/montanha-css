@@ -1,0 +1,55 @@
+{
+  "name": "montanha-css",
+  "version": "1.0.0",
+  "description": "A pure CSS framework with modular layers",
+  "main": "dist/montanha.css",
+  "style": "dist/montanha.css",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "sideEffects": ["*.css"],
+  "exports": {
+    ".": "./dist/montanha.css",
+    "./base": "./dist/montanha.base.css",
+    "./components": "./dist/montanha.components.css",
+    "./utilities": "./dist/montanha.utilities.css",
+    "./tokens": "./src/core/tokens.css"
+  },
+  "scripts": {
+    "dev": "pnpm --filter docs run dev",
+    "build": "pnpm run build:layers && pnpm run build:bundle",
+    "build:layers": "postcss src/layers/montanha.base.css -o dist/montanha.base.css && postcss src/layers/montanha.components.css -o dist/montanha.components.css && postcss src/layers/montanha.utilities.css -o dist/montanha.utilities.css && node scripts/build-tokens.js && node scripts/build-figma-tokens.js",
+    "build:bundle": "cat dist/montanha.base.css dist/montanha.components.css dist/montanha.utilities.css > dist/montanha.css && postcss dist/montanha.css -o dist/montanha.min.css",
+    "preview": "pnpm --filter docs run preview",
+    "generate:tokens": "node scripts/generate-tokens.js",
+    "generate:figma": "node scripts/build-figma-tokens.js",
+    "docs:dev": "cd docs && npm run dev",
+    "docs:build": "cd docs && npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "utility-classes",
+    "components",
+    "design-system"
+  ],
+  "author": "Tiago Boas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tiagoboas/montanha-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tiagoboas/montanha-css/issues"
+  },
+  "homepage": "https://github.com/tiagoboas/montanha-css#readme"
+} 
